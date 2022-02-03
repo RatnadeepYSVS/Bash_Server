@@ -10,11 +10,7 @@ const app = express()
 const port = process.env.PORT || 5000
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(cors({
-    credentials:true,
-    optionsSuccessStatus:200,
-    origin:"*"
-}))
+app.use(cors())
 app.use(authRoutes)
 app.use(codeRoutes)
 app.listen(port,()=>console.log(`Server running on ${port}`))
