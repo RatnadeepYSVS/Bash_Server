@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(cors({
     credentials:true,
     optionsSuccessStatus:200,
-    origin:'http://localhost:3000'
+    origin:['http://localhost:3000','https://bash-ide.vercel.app']
 }))
 app.use(authRoutes)
 app.use(codeRoutes)
