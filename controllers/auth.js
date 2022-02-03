@@ -1,10 +1,6 @@
 import jwt from "jsonwebtoken"
 import bcrypt from 'bcryptjs'
 import User from "../models/User.js"
-export const getUser=async(req,res)=>{
-    const { user } = res.locals
-    return res.status(200).json({user})
-}
 export const signup = async(req,res)=>{
     const { body } = req
     let { email,password } = body
