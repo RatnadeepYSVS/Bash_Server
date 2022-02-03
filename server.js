@@ -16,4 +16,4 @@ app.use(cors({
 }))
 app.use(authRoutes)
 app.use(codeRoutes)
-app.listen(5000,()=>console.log(`Server running on ${port}`))
+app.listen(port,()=>console.log(`Server running on ${port}`))
